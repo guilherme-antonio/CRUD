@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Código" />
+
+        <EditText
+            android:id="@+id/edCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome" />
+
+        <EditText
+            android:id="@+id/edNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nota" />
+
+        <EditText
+            android:id="@+id/edNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bntCadastrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bnt_cadastrar"
+        app:layout_constraintEnd_toStartOf="@+id/bntAlterar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="bntCadastrar"/>
+
+    <Button
+        android:id="@+id/bntAlterar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bnt_alterar"
+        app:layout_constraintBottom_toBottomOf="@+id/bntCadastrar"
+        app:layout_constraintEnd_toStartOf="@+id/bntExcluir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bntCadastrar"
+        android:onClick="bntAlterar"/>
+
+    <Button
+        android:id="@+id/bntExcluir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bnt_excluir"
+        app:layout_constraintBottom_toBottomOf="@+id/bntAlterar"
+        app:layout_constraintEnd_toStartOf="@+id/bntPesquisar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bntAlterar"
+        android:onClick="bntExcluir"/>
+
+    <Button
+        android:id="@+id/bntPesquisar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bnt_pesquisar"
+        app:layout_constraintBottom_toBottomOf="@+id/bntExcluir"
+        app:layout_constraintEnd_toStartOf="@+id/bntListar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bntExcluir"
+        android:onClick="bntPesquisar"/>
+
+    <Button
+        android:id="@+id/bntListar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bnt_listar"
+        app:layout_constraintBottom_toBottomOf="@+id/bntPesquisar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bntPesquisar"
+        android:onClick="bntListar"/>
+
+</android.support.constraint.ConstraintLayout>
